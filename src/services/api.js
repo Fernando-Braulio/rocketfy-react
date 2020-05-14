@@ -8,19 +8,19 @@ export function loadLists() {
             id: 1,
             content: 'Estudar módulo 01 de NodeJS',
             labels: ['#7159c1'],
-            user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+            user: 'https://api.adorable.io/avatars/285/abott@adorable.png'
           },
           {
             id: 2,
             content: 'Criar vídeo para o Youtube ensinando a recriar a interface do Pipefy',
-            labels: ['#7159c1'],
-            user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+            labels: ['#7159c1', '#54e1f7'],
+            user: 'https://api.adorable.io/avatars/285/abott@adorable.png'
           },
           {
             id: 3,
             content: 'Estudar módulo 03 de React Native',
             labels: ['#7159c1'],
-            user: 'https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/profile.png'
+            user: 'https://api.adorable.io/avatars/285/abott@adorable.png'
           },
           {
             id: 4,

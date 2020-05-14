@@ -2,14 +2,14 @@ import React from 'react';
 
 import { Container, Label } from './styles';
 
-const Card = () => {
+const Card = ({data}) => {
   return (
     <Container>
       <header>
-        <Label color="#7159c1" />
+        {data.labels.map(label => <Label key={label} color={label} />)}
       </header>
-      <p>Fazer migração completa do servidor</p>
-      <img src="https://api.adorable.io/avatars/285/abott@adorable.png" alt="" />
+      <p>{data.content}</p>
+      { data.user && <img src={data.user} alt="" /> }
     </Container>
   );
 }
