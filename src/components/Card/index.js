@@ -26,7 +26,7 @@ const Card = ({data, index, listIndex}) => {
       const draggedIndex = item.index; //INDEX DO ITEM QUE ESTÁ SENDO ARRASTADO
       const targetIndex = index; //QUAL O ALVO QUE ESTÁ ARRASTANDO
 
-      if (draggedIndex === targetIndex) {
+      if (draggedIndex === targetIndex && draggedListIndex === targetListIndex) {
         return;
       }
 
