@@ -11,4 +11,9 @@ Caso queira o código fonte
 git clone https://github.com/Fernando-Braulio/rocketfy-react.git
 ```
 
-## Terminal
+## No terminal execute
+### `npm install`
+Irá instalar as dependencias e pacotes do projeto.
+
+### `npm start`
+Executa o aplicativo.
