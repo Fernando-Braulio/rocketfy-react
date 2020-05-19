@@ -3,12 +3,12 @@ import { useDrag, useDrop } from 'react-dnd';
 import BoardContext from '../Board/context';
 import { Container, Label } from './styles';
 
-const Card = ({data, index}) => {
+const Card = ({data, index, listIndex}) => {
   const ref = useRef();
   const { move } = useContext(BoardContext);
 
   const [{ isDragging }, dragRef ] = useDrag({
-    item: { type: 'CARD', index, id: data.id, content: data.content },
+    item: { type: 'CARD', index, id: data.id, content: data.content, listIndex },
     collect: monitor => ({
       isDragging: monitor.isDragging(),
     }),
@@ -17,6 +17,9 @@ const Card = ({data, index}) => {
   const [, dropRef] = useDrop({
     accept: 'CARD',
     hover(item, monitor){
+      const draggedListIndex = item.listIndex;
+      const targetListIndex = listIndex;
+
       //console.log(item.id); //PARA PEGAR O ID DO CARD QUE ESTOU ARRASTANDO
       //console.log(data.id); //PARA PEGAR O ID DO CARD EM QUE ESTÁ RECEBENDO
 
@@ -40,7 +43,10 @@ const Card = ({data, index}) => {
         return;
       }
 
-      move(draggedIndex, targetIndex);
+      move(draggedListIndex, targetListIndex, draggedIndex, targetIndex);
+
+      item.index = targetIndex;
+      item.listIndex = targetListIndex;
     }
   });
 
